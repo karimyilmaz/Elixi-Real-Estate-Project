@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 export const Button = styled(Link)`
-    background: ${(props) => (props.primary? '#000d1a': 'CD853F')};
+    background: ${(props) => (props.primary? '#000d1a': '#CD853F')};
     text-decoration: none;
     border: none;
     border-radius: ${(props) => (props.round? '30px': '0px')};

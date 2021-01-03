@@ -10,7 +10,7 @@ const Nav = styled.nav`
     z-index: 100;
     position: fixed;
     width: 100%;
-    height: 11%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;

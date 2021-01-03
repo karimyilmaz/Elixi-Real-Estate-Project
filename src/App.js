@@ -7,9 +7,10 @@ import Hero from './Components/Hero';
 import { sliderData } from './data/SliderData'
 import DropDown from './Components/DropDown'
 import InfoSection from './Components/InfoSection';
-import {InfoData} from './data/InfoData'
+import {InfoData, InfoDataTwo} from './data/InfoData'
 import ViewNewest from './Components/ViewNewest';
 import { vnd } from './data/ViewNewestData'
+import StunningInterior from './Components/StunningInterior';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +23,9 @@ function App() {
         < Hero sliderData={sliderData} />
         < InfoSection {...InfoData}/>
         < ViewNewest viewNewestData = {vnd}/>
-
+        < StunningInterior />
+        <InfoSection {...InfoDataTwo}/>
+        <h1>hello</h1>
       </Router>    
 
       

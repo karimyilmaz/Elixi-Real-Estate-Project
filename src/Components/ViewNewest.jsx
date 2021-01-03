@@ -8,7 +8,12 @@ import { InView } from 'react-intersection-observer'
 const ViewNewestSection = styled.section`
     width: 100%;
     height: 100%;
-    padding: 4rem 0rem;
+    padding-top:  0rem;
+    padding-bottom: 4rem;
+    
+    @media only screen and (max-width: 711px){
+        height: 1000px;
+    }
 `
 const ViewNewestContainer = styled.div`
     padding: 3rem 4rem;

@@ -6,7 +6,7 @@ import { InView } from 'react-intersection-observer'
 
 const Section = styled.section`
     width: 100%;
-    height: 700px;
+    height: 100%;
     padding: 4rem 0rem;
 
     @media only screen and (max-width: 950px){
@@ -89,7 +89,7 @@ const HeroImage = styled.img`
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
-    transition: 3.5s;
+    transition: 3s;
     opacity: 0;
     transform: scale(0.7);
 

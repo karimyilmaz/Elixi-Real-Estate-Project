@@ -17,6 +17,6 @@ export const InfoDataTwo =
         paragraphOne: 'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas?', 
         paragraphTwo: 'repeat predefined chunks as necessary, making this the first true generator on the Internet',
         buttonLabel:  'View Homes',
-        image: ImageTwo,
+        image: ImageOne,
         reverse: true
     }    
