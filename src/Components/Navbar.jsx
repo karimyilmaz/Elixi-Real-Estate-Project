@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Link} from 'react-router-dom'
 import {menuData} from '../data/MenuData'
 import { Button } from './Button'
@@ -14,8 +14,13 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: ${(props) => (props.showBg? '#cd853f': 'transparent')};
-`
+    background: transparent;
+
+    ${(props) => (props.showBg && css` background: #cd853f;`)}
+
+    // background: ${(props) => (props.showBg? '#cd853f': 'transparent')};
+    transition: background 2s;
+    `
 const Logo = styled(Link)`
     font-style: italic;
     color: #fff;
@@ -58,20 +63,25 @@ const NavBtn = styled.div`
     
     `
 
-const Navbar = ({setIsOpen}) => {
-    let [showBg, setShowBg] = useState(false)
+const Navbar = ({setIsOpen, home}) => {
+    let [showBg, setShowBg] = useState(home? false : true)
     
     useEffect(() => {
+        if(home){
         window.addEventListener('scroll', () => {
             if(window.scrollY === 0)
                 setShowBg(false)
             else
                 setShowBg(true)
 
-        }, {passive: true})
+        }, {passive: true}) 
+    
+        
+    }
+
     }, [])
     
-    console.log('Navbar rendered')
+    
     return (
         <Nav showBg={showBg}>
             <Logo to='/'>ELIXI</Logo>

@@ -117,7 +117,7 @@ function StunningInterior() {
                         return (<Container ref={ref} inview={inView}>
                             <h1>Stunning Interior</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id efficitur risus, sit amet volutpat turpis. <br/> Nam scelerisque elit at tellus vulputate mollis. Proin at mollis purus. Sed a leo tortor. </p>
-                            <Button>Learn More</Button>
+                            <Button to='#'>Learn More</Button>
                         </Container>)
                     }}
                 </InView>

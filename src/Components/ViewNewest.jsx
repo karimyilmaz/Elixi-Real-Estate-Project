@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import { Button } from './Button'
 import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom'
 import { InView } from 'react-intersection-observer'
@@ -101,7 +100,7 @@ const Heading = styled.h1`
 `
 
 function ViewNewest({viewNewestData}) {
-    console.log(viewNewestData)
+    
     return (
         <ViewNewestSection>
             <ViewNewestContainer>

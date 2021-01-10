@@ -1,9 +1,20 @@
 import React, {useState, useEffect, useRef} from 'react'
-import styled, {css} from 'styled-components/macro'
+import styled, {css, keyframes} from 'styled-components/macro'
 import { Button } from './Button'
 import { FiArrowRight } from 'react-icons/fi';
 import {IoArrowForward, IoArrowBack} from 'react-icons/io5'
 
+const kf = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+
+`;
 
 const HeroSection = styled.section`
     height: 100vh;
@@ -68,33 +79,24 @@ const HeroContent = styled.div`
     width: calc(100% - 100px);
     color: #fff;
     
-    animation: transitionIn 2s;
-
-    h1 {
-        font-size: clamp(1rem, 8vw, 2rem);
-        font-weight: 400;
-        text-transform: uppercase;
-        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
-        margin-bottom: 0.8rem;
-        
-    }
 
     p {
         margin-bottom: 1.2rem;
         text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
-
     }
-
-    @keyframes transitionIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-
-        }
-    }
+    
 `
+const Heading = styled.h1`
+    font-size: clamp(1rem, 8vw, 2rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    margin-bottom: 0.8rem;
+
+    
+`
+
+
 const SliderButtons = styled.div`
    position: absolute;     
    bottom: 50px;
@@ -103,9 +105,7 @@ const SliderButtons = styled.div`
    z-index: 80;
 `
 
-const arrow = styled(FiArrowRight)`
-    margin-left: 0.5rem;
-`
+
 const arrowButtons = css`
     width: 50px;
     height: 50px;
@@ -178,22 +178,20 @@ function Hero({sliderData}) {
         }
     }, [])
     
-    console.log('Hero Rendered')
+    
 
     return (
         <HeroSection>
             <HeroWrapper>
 
-            
-            
                     <HeroSlide>
                         <HeroSlider>
                             <HeroImage src={sliderData[heroSlidepos].image} alt={sliderData[heroSlidepos].alt}/>
-                            <HeroContent>
-                                <h1>{sliderData[heroSlidepos].title}</h1>
-                                <p>{sliderData[heroSlidepos].price}</p>
-                                <Button to={sliderData[heroSlidepos].path} primary
-                                css={`max-width: 160px;`}>
+                            <HeroContent css={`animation: ${kf} 2s;`}>
+                                    <Heading>{sliderData[heroSlidepos].title}</Heading>
+                                    <p>{sliderData[heroSlidepos].price}</p>
+                                    <Button to={sliderData[heroSlidepos].path} primary='true' 
+                                    css={`max-width: 190px;`}>
                                     {sliderData[heroSlidepos].label}
                                     <FiArrowRight/>
                                 </Button>
@@ -201,28 +199,6 @@ function Hero({sliderData}) {
                         </HeroSlider>
                     </HeroSlide>
             
-
-
-
-
-                {/* {sliderData.map((slide, index) => {
-                    return( 
-                    <HeroSlide key={index}>
-                        <HeroSlider>
-                            <HeroImage src={slide.image} alt={slide.alt}/>
-                            <HeroContent>
-                                <h1>{slide.title}</h1>
-                                <p>{slide.price}</p>
-                                <Button to={slide.path} primary
-                                css={`max-width: 160px;`}>
-                                    {slide.label}
-                                    <FiArrowRight/>
-                                </Button>
-                            </HeroContent>
-                        </HeroSlider>
-                    </HeroSlide>
-                )})} */}
-
 
                 <SliderButtons>
                     <PrevArrow  onClick={() => handleArrow('prev')}/>

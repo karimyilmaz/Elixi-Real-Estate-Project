@@ -119,7 +119,7 @@ const InfoSection = ({heading, paragraphOne, paragraphTwo, buttonLabel, image, r
                     <h1>{heading}</h1>
                     <p>{paragraphOne}</p>
                     <p>{paragraphTwo}</p>
-                    <Button primary to='/homes' small>{buttonLabel}</Button>
+                    <Button primary='true' to='/homes' small='true'>{buttonLabel}</Button>
                 </ColumnLeft>
                 
                 <ColumnRight reverse={reverse}>
