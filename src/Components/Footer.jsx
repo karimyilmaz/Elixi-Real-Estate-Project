@@ -14,17 +14,61 @@ const FooterSection = styled.section`
     color: #fff;
     display: flex;
     flex-direction: column;
+    margin-top: 200px;
+    
+    @media only screen and (max-width: 844px){
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 330px){
+        padding: 1.5rem 3rem;
+        
+
+
+    }
+    
     `
 const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
+
+    @media only screen and (max-width: 844px){
+        flex-direction: column;
+        
+
+
+    }
 `    
 const ContainerOne = styled.div`
     width: 50%;
     h1 {
         font-size: 2.8rem;
+
+        @media only screen and (max-width: 844px){
+            text-align: center;   
+            
+    
+    
+        }
+
+        @media only screen and (max-width: 663px){
+            font-size: 2.5rem;
+    
+            
+        }
+        
     }
+
+    @media only screen and (max-width: 844px){
+        width: 100%;   
+        
+
+
+    } 
+
+    
+    
 `
 const ContainerTwo = styled.div`
     
@@ -65,6 +109,18 @@ const ContainerRight = styled.div`
     display: flex;
     padding-top: 1.5rem;
     justify-content: flex-end;
+
+    @media only screen and (max-width: 844px){
+        width: 100%;   
+        justify-content: space-around;
+        padding: 1.5rem 2rem;
+        
+
+
+    } 
+    
+   
+    
 `
 const SocialMediaContainer = styled.div`
     display: flex;
@@ -78,6 +134,23 @@ const SocialMediaContainer = styled.div`
 
     svg {
         cursor: pointer;
+    }
+
+    @media only screen and (max-width: 844px){
+        padding: 1rem 0;
+    }
+
+    @media only screen and (max-width: 663px){
+        width: 100%;
+        padding: 1rem 2rem;
+
+        
+    }
+
+    @media only screen and (max-width: 433px){
+        padding: 1rem 0rem;
+
+        
     }
 `
 

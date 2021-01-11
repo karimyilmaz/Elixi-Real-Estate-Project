@@ -10,6 +10,9 @@ const ViewNewestSection = styled.section`
     padding-top:  0rem;
     padding-bottom: 4rem;
     
+        
+    
+    
     @media only screen and (max-width: 711px){
         height: 1000px;
     }

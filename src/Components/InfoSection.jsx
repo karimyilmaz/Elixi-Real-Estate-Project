@@ -10,12 +10,18 @@ const Section = styled.section`
     padding: 4rem 0rem;
 
     @media only screen and (max-width: 950px){
-        height: 1400px;
+        height: 1500px;
 
     }
 
-    @media only screen and (max-width: 825px){
+    @media only screen and (max-width: 819px){
         height: 1200px;
+
+    }
+
+    @media only screen and (max-width: 816px){
+        height: 1200px;
+        margin-bottom: 200px;
 
     }
 
@@ -39,7 +45,7 @@ const Container = styled.div`
     }
 `
 const ColumnLeft = styled.div`
-    flex-basis: 55%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +78,7 @@ const ColumnLeft = styled.div`
 `
 const ColumnRight = styled.div`
     padding: 1rem 2rem;
-    flex-basis: 45%;
+    flex-basis: 50%;
     order: ${(props) => (props.reverse? '1': '2')};
     display: flex;
     justify-content: center;
@@ -101,9 +107,11 @@ const HeroImage = styled.img`
     };
 
     
-    // @media only screen and (max-width: 950px){
+    @media only screen and (max-width: 950px){
+        width: 100%;
+        height: 100%;
         
-    // }
+    }
 
     
 
