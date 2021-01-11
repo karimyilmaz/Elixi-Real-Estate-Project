@@ -19,7 +19,7 @@ function App() {
       <Router>
         <GlobalStyle/>
         <DropDown setIsOpen={setIsOpen} isOpen={isOpen}/>
-          <Switch>
+          {!isOpen && <Switch>
             <Route exact path='/about'>
               <About setIsOpen={setIsOpen}/>
             </Route>
@@ -32,9 +32,9 @@ function App() {
             <Route path='/'>
               <Home setIsOpen={setIsOpen}/>
             </Route>
-          </Switch>
+          </Switch>}
         
-        <Footer footerData = {footerData}/>
+        {!isOpen && <Footer footerData = {footerData}/>}
         
         
         
